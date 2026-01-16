@@ -1,5 +1,5 @@
 ---
-name: aws-expert
+name: aws-knowledge
 description: AWS Knowledge agent that uses the AWS Knowledge MCP server to search and retrieve AWS documentation. Use this agent when you need to look up AWS service information, check regional availability, find best practices, or troubleshoot AWS issues.
 ---
 

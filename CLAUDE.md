@@ -5,7 +5,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 ## Project Overview
 
 This is the **aws-claude-skills** marketplace for Claude Code plugins. It provides AWS-related plugins including:
-- **aws-expert**: An AWS specialist agent that answers AWS-related questions using the AWS Knowledge MCP server
+- **aws-expert:aws-knowledge**: An AWS specialist agent that answers AWS-related questions using the AWS Knowledge MCP server
 
 ## Architecture
 
@@ -19,7 +19,7 @@ aws-claude-skills/
 │       │   └── plugin.json  # Plugin manifest
 │       ├── .mcp.json        # MCP server configuration
 │       ├── agents/
-│       │   └── aws-expert.md  # Agent definition
+│       │   └── aws-knowledge.md  # Agent definition
 │       └── CLAUDE.md        # Plugin documentation
 ├── CLAUDE.md                # This file
 └── README.md                # User-facing documentation
@@ -28,7 +28,8 @@ aws-claude-skills/
 ## Installing This Marketplace
 
 ```bash
-/plugin add github:shawnawshk/aws-claude-skills
+/plugin marketplace add shawnawshk/aws-claude-skills
+
 ```
 
 Then install the aws-expert plugin:
