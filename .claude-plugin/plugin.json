@@ -1,0 +1,12 @@
+{
+  "name": "aws-expert",
+  "version": "1.0.0",
+  "description": "AWS specialist plugin that answers AWS-related questions, checks AWS documentation via AWS Knowledge MCP server, and evaluates solution feasibility",
+  "author": {
+    "name": "shawnzh"
+  },
+  "capabilities": {
+    "agents": ["aws-expert"]
+  },
+  "mcpServers": ["aws-knowledge-mcp-server"]
+}
