@@ -4,41 +4,46 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is an AWS Expert plugin for Claude Code that provides:
-- **aws-expert agent**: An AWS specialist that answers AWS-related questions using the AWS Knowledge MCP server
+This is the **aws-claude-skills** marketplace for Claude Code plugins. It provides AWS-related plugins including:
+- **aws-expert**: An AWS specialist agent that answers AWS-related questions using the AWS Knowledge MCP server
 
 ## Architecture
 
 ```
-aws-expert-plugin/
+aws-claude-skills/
 ├── .claude-plugin/
-│   └── plugin.json          # Plugin manifest (name, version, description, author)
-├── .mcp.json                 # MCP server configuration (aws-knowledge)
-├── agents/
-│   └── aws-expert.md        # Agent definition with YAML frontmatter and system prompt
-└── CLAUDE.md
+│   └── marketplace.json     # Marketplace manifest listing all plugins
+├── plugins/
+│   └── aws-expert/          # AWS Expert plugin
+│       ├── .claude-plugin/
+│       │   └── plugin.json  # Plugin manifest
+│       ├── .mcp.json        # MCP server configuration
+│       ├── agents/
+│       │   └── aws-expert.md  # Agent definition
+│       └── CLAUDE.md        # Plugin documentation
+├── CLAUDE.md                # This file
+└── README.md                # User-facing documentation
 ```
 
-## Key Components
+## Installing This Marketplace
 
-### AWS Expert Agent (`agents/aws-expert.md`)
-- Markdown file with YAML frontmatter defining agent metadata
+```bash
+/plugin add github:shawnawshk/aws-claude-skills
+```
+
+Then install the aws-expert plugin:
+```bash
+/plugin install aws-expert
+```
+
+## Plugin: aws-expert
+
+### Features
 - Uses AWS Knowledge MCP server to search and retrieve AWS documentation
-- Answers AWS service questions, checks regional availability, finds best practices
-- Evaluates solution feasibility considering security, cost, and performance
+- Answers AWS service questions and checks regional availability
+- Evaluates solution feasibility (security, cost, performance)
+- Finds AWS best practices and troubleshoots issues
 
-### MCP Server Configuration (`.mcp.json`)
-- Configures `aws-knowledge` MCP server using `awslabs.aws-documentation-mcp-server`
-- Requires `uvx` (Python package runner) to be available
-
-## Usage
-
-1. Install the plugin via symlink or copy to `~/.claude/plugins/aws-expert`
-2. Restart Claude Code to load the plugin
-3. The `aws-expert` agent becomes available for AWS-related questions
-
-## MCP Server Dependency
-
-The plugin relies on AWS Labs' AWS Documentation MCP Server:
-- Package: `awslabs.aws-documentation-mcp-server`
-- Runner: `uvx` (install via `pip install uv`)
+### MCP Server Dependency
+- Server: `aws-knowledge-mcp-server`
+- URL: `https://knowledge-mcp.global.api.aws`
