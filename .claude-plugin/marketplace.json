@@ -2,7 +2,7 @@
   "name": "aws-claude-skills",
   "description": "AWS Claude Skills - Plugins for AWS expertise using AWS Knowledge MCP server",
   "owner": {
-    "name": "shawnawshk"
+    "name": "Shawn Zhang"
   },
   "plugins": [
     {
@@ -10,7 +10,7 @@
       "description": "AWS specialist plugin that answers AWS-related questions using the AWS Knowledge MCP server",
       "version": "1.0.0",
       "author": {
-        "name": "shawnzh"
+        "name": "Shawn Zhang"
       },
       "source": "./plugins/aws-expert",
       "category": "development"
