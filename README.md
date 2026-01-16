@@ -47,7 +47,7 @@ An AWS specialist plugin that provides expert-level AWS guidance using the AWS K
 ```
 
 ```bash
-@"aws-expert:aws-knowledge (agent)" Evaluate this architecture: Lambda + API Gateway + DynamoDB for a serverless API
+@"aws-expert:aws-knowledge (agent)" What's Lambda durable functions?
 ```
 
 #### MCP Server
