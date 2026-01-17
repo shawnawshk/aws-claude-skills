@@ -5,5 +5,5 @@
   "author": {
     "name": "Shawn Zhang"
   },
-  "mcpServers": "../.mcp.json"
+  "mcpServers": "./.mcp.json"
 }
