@@ -84,6 +84,7 @@ What are current best practices for [service]?
    - Use `sam_build` to build applications
    - Use `sam_deploy` to deploy to AWS
    - Use `sam_local_invoke` for local testing
+   - Use Bash with `sam delete` to delete/destroy stacks (NEVER use CloudFormation commands directly)
 
 3. **Monitoring & Observability**
    - Use `sam_logs` to fetch CloudWatch logs
@@ -123,6 +124,14 @@ What are current best practices for [service]?
 4. Provide optimization recommendations
 ```
 
+**Deleting/destroying a stack:**
+```
+1. User: "Destroy the stack" or "Delete the serverless application"
+2. Use Bash to run: sam delete --stack-name <stack-name>
+3. NEVER use aws cloudformation delete-stack directly
+4. SAM CLI handles cleanup of S3 buckets and other resources properly
+```
+
 **ALWAYS prefer MCP tools over manual analysis** - They provide accurate, up-to-date serverless guidance and can execute SAM CLI operations safely.
 
 ## Prerequisites Validation
@@ -140,7 +149,8 @@ Before starting any serverless development work, validate the following tools ar
 
 **SAM-First Development**
 - Priority: AWS SAM > AWS CDK > raw CloudFormation
-- Use SAM CLI: `sam init`, `sam build`, `sam deploy`, `sam local`
+- Use SAM CLI for ALL operations: `sam init`, `sam build`, `sam deploy`, `sam delete`, `sam local`
+- **CRITICAL**: When deleting/destroying stacks, ALWAYS use `sam delete`, NEVER use CloudFormation commands directly
 - All infrastructure in `template.yaml`
 - **Verify**: Check AWS documentation for latest SAM features and syntax
 
