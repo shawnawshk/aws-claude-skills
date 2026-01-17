@@ -1,6 +1,6 @@
 ---
 name: aws-serverless-dev
-description: Build production-ready serverless applications on AWS using AWS SAM, Lambda, API Gateway, EventBridge, DynamoDB, and other serverless services. Use when working with serverless, Lambda functions, SAM templates, API Gateway, event-driven architectures, or serverless deployments on AWS.
+description: Build, review, analyze, and optimize serverless applications on AWS using SAM, Lambda, API Gateway, EventBridge, and DynamoDB. Use when asked to create, deploy, build, check, review, analyze, debug, troubleshoot, or optimize serverless applications, Lambda functions, SAM projects, REST/HTTP APIs, event-driven architectures, or serverless deployments. Also use for sam init, sam build, sam deploy, sam local commands, local testing, performance optimization, cost reduction, security audits, or evaluating existing serverless project setups.
 keywords:
   - sam
   - lambda
