@@ -66,6 +66,65 @@ What are current best practices for [service]?
 - Quotas or limits
 **→ Always search AWS documentation first**
 
+## CRITICAL: Use AWS Serverless MCP Server Tools
+
+**The AWS Serverless MCP Server provides specialized tools for serverless operations. ALWAYS use these tools when appropriate:**
+
+### When to Use MCP Server Tools
+
+**MANDATORY for these tasks:**
+
+1. **Reviewing/Analyzing Existing Projects**
+   - Use `get_serverless_templates` to find reference architectures
+   - Use `get_lambda_guidance` to evaluate Lambda suitability
+   - Use `get_iac_guidance` for IaC recommendations
+
+2. **SAM Project Operations**
+   - Use `sam_init` to initialize new projects
+   - Use `sam_build` to build applications
+   - Use `sam_deploy` to deploy to AWS
+   - Use `sam_local_invoke` for local testing
+
+3. **Monitoring & Observability**
+   - Use `sam_logs` to fetch CloudWatch logs
+   - Use `get_metrics` to retrieve performance metrics
+
+4. **Event Source Mappings**
+   - Use `esm_guidance` for Kafka, Kinesis, DynamoDB, SQS setup
+   - Use `esm_optimize` for performance tuning
+   - Use `esm_kafka_troubleshoot` for Kafka issues
+
+5. **Web Application Deployment**
+   - Use `deploy_webapp` for fullstack/frontend/backend deployments
+   - Use `configure_domain` for custom domain setup
+
+6. **Schema & Events**
+   - Use `list_registries`, `search_schema`, `describe_schema` for EventBridge schemas
+   - Use `get_lambda_event_schemas` for Lambda event sources
+
+### How to Use MCP Tools
+
+**Example workflows:**
+
+**Reviewing a project:**
+```
+1. User: "Help me check this serverless project setup"
+2. Use get_lambda_guidance with use_case description
+3. Use get_serverless_templates to find similar patterns
+4. Use Read tool to examine template.yaml
+5. Provide recommendations based on best practices
+```
+
+**Analyzing performance:**
+```
+1. Use get_metrics to retrieve Lambda/API Gateway metrics
+2. Use sam_logs to check for errors
+3. Use esm_optimize if using event sources
+4. Provide optimization recommendations
+```
+
+**ALWAYS prefer MCP tools over manual analysis** - They provide accurate, up-to-date serverless guidance and can execute SAM CLI operations safely.
+
 ## Prerequisites Validation
 
 Before starting any serverless development work, validate the following tools are installed:
