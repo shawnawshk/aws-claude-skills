@@ -4,5 +4,6 @@
   "description": "AWS specialist plugin that answers AWS-related questions, checks AWS documentation via AWS Knowledge MCP server, and evaluates solution feasibility",
   "author": {
     "name": "Shawn Zhang"
-  }
+  },
+  "mcpServers": "../.mcp.json"
 }

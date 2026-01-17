@@ -1,0 +1,31 @@
+{
+  "name": "serverless-dev",
+  "version": "1.0.0",
+  "description": "Build production-ready serverless applications on AWS using AWS SAM, Lambda, API Gateway, EventBridge, DynamoDB, and other serverless services following AWS best practices",
+  "author": {
+    "name": "Shawn Zhang"
+  },
+  "homepage": "https://github.com/shawnawshk/aws-claude-skills",
+  "repository": "https://github.com/shawnawshk/aws-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "serverless",
+    "lambda",
+    "sam",
+    "api-gateway",
+    "eventbridge",
+    "dynamodb",
+    "s3",
+    "step-functions",
+    "sqs",
+    "sns",
+    "cloudformation",
+    "lambda-durable-functions",
+    "workflow",
+    "aws",
+    "infrastructure-as-code",
+    "event-driven"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "../.mcp.json"
+}
