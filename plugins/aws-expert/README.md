@@ -22,6 +22,19 @@ AWS specialist plugin providing expert-level AWS guidance using the AWS Knowledg
 
 ## Usage
 
+### Quick Documentation Lookup
+
+Use the `/aws-docs` command for quick AWS documentation searches:
+
+```
+/aws-docs Lambda memory limits
+/aws-docs S3 bucket policy examples
+/aws-docs Is Bedrock available in eu-west-1
+/aws-docs EventBridge vs SNS comparison
+```
+
+### Conversational AWS Help
+
 The plugin provides an `aws-knowledge` agent that automatically activates for AWS-related questions:
 
 ```
@@ -31,11 +44,15 @@ Is EventBridge Scheduler available in eu-west-1?
 Why is my Lambda function timing out when connecting to RDS?
 ```
 
-You can also explicitly invoke the agent:
+### When to Use Each
 
-```
-@"aws-expert:aws-knowledge (agent)" What are the current Lambda runtime versions?
-```
+| Use Case | Recommended |
+|----------|-------------|
+| Quick fact lookup | `/aws-docs` command |
+| Concept verification | `/aws-docs` command |
+| Architecture discussion | Agent (automatic) |
+| Troubleshooting help | Agent (automatic) |
+| Regional availability | Either |
 
 ## MCP Server
 
