@@ -1,5 +1,7 @@
 # Local Testing with SAM
 
+> **⚠️ VERIFICATION REQUIRED**: Before recommending SAM CLI commands, verify current syntax and features using AWS Knowledge MCP server. SAM CLI is frequently updated with new capabilities.
+
 ## Local Function Invocation
 
 ### Invoke with Event File

@@ -1,5 +1,7 @@
 # Lambda Durable Functions
 
+> **⚠️ VERIFICATION REQUIRED**: Before recommending Lambda Durable Functions patterns, verify current availability, features, and syntax using AWS Knowledge MCP server. This is a newer Lambda capability that may have updates.
+
 Lambda Durable Functions enable long-running workflows that can span hours, days, or up to 1 year. They automatically checkpoint state and resume execution, allowing workflows to wait for callbacks, handle retries, and maintain execution history.
 
 ## Enabling Durable Functions

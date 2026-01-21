@@ -1,17 +1,23 @@
 ---
-name: aws-serverless-dev
-description: Build, review, analyze, and optimize serverless applications on AWS using SAM, Lambda, API Gateway, EventBridge, and DynamoDB. Use when asked to create, deploy, build, check, review, analyze, debug, troubleshoot, or optimize serverless applications, Lambda functions, SAM projects, REST/HTTP APIs, event-driven architectures, or serverless deployments. Also use for sam init, sam build, sam deploy, sam local commands, local testing, performance optimization, cost reduction, security audits, or evaluating existing serverless project setups.
+name: aws-serverless
+description: This skill should be used when users ask to build, deploy, or optimize serverless applications on AWS. Trigger phrases include "create a Lambda function", "deploy my SAM app", "help me with serverless", "build an API backend", "set up EventBridge", "create a DynamoDB table", "sam init", "sam build", "sam deploy", "sam local invoke", "review my serverless project", "optimize Lambda performance", "reduce cold starts", "troubleshoot API Gateway", "set up event-driven architecture", "create a REST API", or "help me with AWS serverless development".
 keywords:
+  - aws
   - sam
   - lambda
   - serverless
   - api-gateway
+  - rest-api
+  - http-api
   - eventbridge
   - dynamodb
   - step-functions
+  - sqs
+  - sns
   - cloudformation
   - event-driven
   - infrastructure-as-code
+  - deploy
 allowed-tools: Read, Bash, Grep, Glob, Write, Edit
 ---
 
@@ -52,11 +58,11 @@ Is [feature] available in [region]?
 What are current best practices for [service]?
 ```
 
-**Example verification flow:**
-1. User asks: "What Lambda runtimes should I use?"
-2. You verify: Search AWS documentation for current Lambda runtime versions
-3. MCP returns: Latest supported runtimes with deprecation dates
-4. You provide: Accurate, current recommendations
+**Verification workflow:**
+1. Receive question about AWS service/feature
+2. Check if information might be outdated or uncertain
+3. Query AWS Knowledge MCP server to verify current details
+4. Provide answer citing AWS documentation where relevant
 
 **Never assume** - If you're unsure about:
 - Service capabilities
@@ -242,60 +248,10 @@ This skill integrates with two MCP servers (configured in `.mcp.json`):
 
 **Capabilities**: Build, deploy, validate templates, local testing orchestration
 
-### AWS Knowledge MCP Server (`aws-knowledge-mcp-server`) ⚠️ USE FREQUENTLY
+### AWS Knowledge MCP Server (`aws-knowledge-mcp-server`)
 **Purpose**: Search and verify AWS documentation in real-time
 
-**ALWAYS use for:**
-- **New features**: "What new Lambda features are available?"
-- **Runtime versions**: "What are current Lambda runtime versions?"
-- **Regional availability**: "Is EventBridge Scheduler available in eu-west-1?"
-- **Best practices**: "What are current Lambda security best practices?"
-- **Service updates**: "Has API Gateway HTTP API syntax changed?"
-- **Deprecations**: "Is Python 3.8 Lambda runtime deprecated?"
-- **Quotas**: "What are Lambda concurrency limits?"
-- **Service capabilities**: "Can Lambda connect to RDS Proxy?"
-
-**Example queries:**
-```
-Search AWS documentation for Lambda SnapStart
-What are the latest SAM CLI features?
-Is Lambda Durable Functions generally available?
-What regions support Lambda arm64?
-What are current DynamoDB on-demand pricing changes?
-```
-
-**Critical**: This MCP server provides **current, authoritative AWS documentation**. Use it liberally when:
-- Unsure about any AWS detail
-- User asks about "new" or "latest" features
-- Discussing version-specific functionality
-- Recommending architectural patterns
-- Verifying syntax or configurations
-
-## Verification Workflow
-
-**Standard verification process:**
-
-1. **User Question**: User asks about AWS service/feature
-2. **Check Uncertainty**: Am I 100% certain this information is current?
-3. **If Uncertain**: Use AWS Knowledge MCP to verify
-4. **Provide Answer**: Give verified, current information
-5. **Note Source**: Mention information is verified from AWS docs if relevant
-
-**Example:**
-```
-User: "What Lambda runtimes should I use for Python?"
-
-You: Let me verify the current Lambda runtime versions.
-[Use AWS Knowledge MCP: "What are current Lambda Python runtime versions?"]
-
-MCP Response: Python 3.13, 3.12, 3.11 supported. Python 3.8 deprecated.
-
-You: "Based on current AWS documentation, I recommend:
-- Python 3.13 (latest)
-- Python 3.12 (stable)
-- Python 3.11 (stable)
-Avoid Python 3.8 as it's deprecated."
-```
+See [CRITICAL: Always Verify with AWS Knowledge](#critical-always-verify-with-aws-knowledge) section above for detailed usage guidance.
 
 ## Important Reminders
 

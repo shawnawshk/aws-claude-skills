@@ -1,5 +1,7 @@
 # API Gateway Patterns
 
+> **⚠️ VERIFICATION REQUIRED**: Before recommending API Gateway configurations, verify current features and syntax using AWS Knowledge MCP server. API Gateway capabilities and best practices evolve over time.
+
 ## REST API with SAM
 
 ```yaml

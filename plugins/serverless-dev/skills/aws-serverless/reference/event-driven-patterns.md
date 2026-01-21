@@ -1,5 +1,7 @@
 # Event-Driven Architecture Patterns
 
+> **⚠️ VERIFICATION REQUIRED**: Before recommending event-driven patterns, verify current EventBridge, SQS, and SNS features using AWS Knowledge MCP server. Event service capabilities and integrations evolve over time.
+
 ## EventBridge
 
 ### EventBridge Rule

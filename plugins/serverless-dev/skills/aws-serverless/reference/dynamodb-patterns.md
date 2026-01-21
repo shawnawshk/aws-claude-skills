@@ -1,5 +1,7 @@
 # DynamoDB Integration Patterns
 
+> **⚠️ VERIFICATION REQUIRED**: Before recommending DynamoDB configurations, verify current pricing, limits, and features using AWS Knowledge MCP server. DynamoDB capabilities and pricing models evolve over time.
+
 ## Table Definition in SAM
 
 ```yaml

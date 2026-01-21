@@ -1,5 +1,7 @@
 # Security and IAM Best Practices
 
+> **⚠️ VERIFICATION REQUIRED**: Before recommending security configurations, verify current IAM best practices and SAM policy templates using AWS Knowledge MCP server. Security recommendations evolve as new features and threats emerge.
+
 ## SAM Policy Templates
 
 Use built-in policy templates for common permissions:

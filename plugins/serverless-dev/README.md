@@ -28,24 +28,12 @@ The plugin will validate these dependencies when first used.
 
 ## Installation
 
-### Local Development (Testing This Plugin)
-
-If you're testing this plugin locally:
-
 ```bash
-# Add as local marketplace
-claude plugin marketplace add /home/coder/serverless-dev
+# Add the marketplace
+/plugin marketplace add shawnawshk/aws-claude-skills
 
-# Install from local marketplace
-claude plugin install aws-serverless-dev@local-dev
-```
-
-### Production Installation (From GitHub)
-
-Once published:
-
-```bash
-claude plugin install aws-serverless-dev
+# Install this plugin
+/plugin install serverless-dev
 ```
 
 ## Usage
@@ -97,8 +85,7 @@ Build and deploy this application using SAM
 ```
 aws-serverless-dev/
 ├── .claude-plugin/
-│   ├── plugin.json              # Plugin manifest
-│   └── marketplace.json         # Local marketplace config (for development)
+│   └── plugin.json              # Plugin manifest
 ├── skills/
 │   └── aws-serverless/
 │       ├── SKILL.md             # Main skill with core guidance
@@ -115,7 +102,6 @@ aws-serverless-dev/
 │           ├── security-iam.md
 │           └── performance-optimization.md
 ├── .mcp.json                    # MCP server configuration
-├── INSTALL.sh                   # Installation helper script
 └── README.md                    # This file
 ```
 
@@ -194,15 +180,15 @@ The plugin includes detailed reference documentation:
 1. Make your changes to skill files or reference documentation
 2. Reinstall the plugin:
    ```bash
-   claude plugin uninstall aws-serverless-dev@local-dev
-   claude plugin install aws-serverless-dev@local-dev
+   /plugin uninstall serverless-dev
+   /plugin install serverless-dev
    ```
 3. Test with Claude Code
 
 ### Adding New Reference Documentation
 
 1. Create new file in `skills/aws-serverless/reference/`
-2. Add verification warning at the top
+2. Add verification warning at the top (see existing files for format)
 3. Update `SKILL.md` to reference the new file
 4. Reinstall plugin to test
 
