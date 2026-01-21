@@ -5,5 +5,19 @@
   "author": {
     "name": "Shawn Zhang"
   },
+  "homepage": "https://github.com/shawnawshk/aws-claude-skills",
+  "repository": "https://github.com/shawnawshk/aws-claude-skills",
+  "license": "MIT",
+  "keywords": [
+    "aws",
+    "cloud",
+    "documentation",
+    "best-practices",
+    "well-architected",
+    "regional-availability",
+    "troubleshooting",
+    "solutions-architect"
+  ],
+  "agents": "./agents/",
   "mcpServers": "./.mcp.json"
 }
