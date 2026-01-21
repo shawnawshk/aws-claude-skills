@@ -18,6 +18,5 @@
     "troubleshooting",
     "solutions-architect"
   ],
-  "agents": "./agents/",
   "mcpServers": "./.mcp.json"
 }
